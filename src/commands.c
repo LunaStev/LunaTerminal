@@ -4,13 +4,12 @@
 
 #ifdef _WIN32
 #include <windows.h>
-#include <direct.h>  // _getcwd(), _mkdir(), _rmdir()
+#include <direct.h> // _getcwd() 사용을 위한 헤더
 #define getcwd _getcwd
 #define mkdir _mkdir
-#define remove _remove
 #else
-#include <dirent.h>
 #include <unistd.h>
+#include <dirent.h>
 #endif
 
 #define MAX_COMMAND_LENGTH 256
