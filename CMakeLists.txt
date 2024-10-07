@@ -11,6 +11,12 @@ else()
     message(WARNING "CMake version is below 3.29. Some features might not be available.")
 endif()
 
+if (WIN32)
+    add_definitions(-D_WINDOWS)
+else()
+    include_directories(/path/to/dirent)
+endif()
+
 add_executable(LunaTerminal src/main.c
         src/commands.c
         src/commands.h)
