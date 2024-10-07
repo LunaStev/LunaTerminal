@@ -11,14 +11,11 @@ int main()
     char command[MAX_COMMAND_LENGTH];
     char arg[MAX_COMMAND_LENGTH];
 
-    char cwd[MAX_PATH_LEN];
-    getcwd(cwd, MAX_PATH_LEN);
-
     printf("Terminal started. Type 'exit' to quit.\n");
 
     while (1)
     {
-        printf("%s >>>  ", cwd);
+        printf("$ ");
         fgets(command, sizeof(command), stdin);
 
         command[strcspn(command, "\n")] = '\0';
