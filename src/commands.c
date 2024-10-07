@@ -1,9 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <dirent.h>
 #include <unistd.h>
-#include <string.h>
-#include <errno.h>
 
 #define MAX_COMMAND_LENGTH 256
 #define MAX_PATH_LEN 4096
