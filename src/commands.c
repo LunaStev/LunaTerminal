@@ -1,12 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
 
 #ifdef _WIN32
 #include <windows.h>
+#include <direct.h>  // _getcwd(), _mkdir(), _rmdir()
+#define getcwd _getcwd
+#define mkdir _mkdir
+#define remove _remove
 #else
 #include <dirent.h>
+#include <unistd.h>
 #endif
 
 #define MAX_COMMAND_LENGTH 256
